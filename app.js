@@ -24,4 +24,16 @@ data.parseFileToArray('./parking-data/parking_feb_2016.csv', function logData(da
   invertedObject = _.invert(ticketOccurences);
   console.log("The most common ticket type was: " + invertedObject[15151]);
 
+  var statesAndDates = [];
+  data.forEach(function getTicketTypes(ticket) {
+    statesAndDates.push([ticket[18], ticket[12]]);
+  });
+
+  var sortedStatesAndDates = _.sortBy(statesAndDates, [function getDate(tuple){
+    return tuple[0];
+  }]);
+
+  sortedStatesAndDates.pop();
+  console.log("The driver who received the last ticket in february was from: "+_.last(sortedStatesAndDates)[1]);
+
 });
