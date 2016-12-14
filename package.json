@@ -1,0 +1,19 @@
+{
+  "name": "node-parking",
+  "version": "1.0.0",
+  "description": "An app that parses CSV data about parking violations. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "node-parking"
+  },
+  "author": "Steph B, Allie R",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^1.1.7",
+    "lodash": "^4.17.2"
+  }
+}
